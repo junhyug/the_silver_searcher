@@ -3,6 +3,8 @@
 set -e
 cd "$(dirname "$0")"
 
+PREFIX="$HOME/.local/"
+
 ./autogen.sh
-./configure "$@"
+./configure --prefix="$PREFIX"
 make -j4
